@@ -1,10 +1,9 @@
-name: Simply Grey
+name: Michael Benz
 markdown: redcarpet
 pygments: true
-github: https://www.github.com/exaem
-about: I am an independent developer from the sunny UK. I dabble in Ruby, play in C and I'm an avid systems administrator.
+github: https://www.github.com/megabytemb
 urls:
     - text: github
-      url: https://github.com/exaem
+      url: https://github.com/megabytemb
     - text: email
-      url: mailto:exaem@exaem.co.uk
+      url: mailto:michael@benz.io
