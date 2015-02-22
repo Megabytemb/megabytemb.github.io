@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 body {
   font-family: 'Open Sans', Helvetica, serif;
   margin: 0;
@@ -6,7 +6,7 @@ body {
 }
 
 .top-line {
-  border-top: 8px solid #7ccdea;
+  border-top: 8px solid #660066;
   position:fixed;
   top: 0;
   left: 0;
