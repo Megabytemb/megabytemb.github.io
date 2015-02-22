@@ -1,2 +1,2 @@
 # Dat Site
-[megabytemb.github.io](megabytemb.github.io)
+[megabytemb.github.io](http://megabytemb.github.io)
