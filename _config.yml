@@ -1,9 +1,13 @@
-name: Michael Benz
 markdown: redcarpet
-pygments: true
-github: https://www.github.com/megabytemb
-urls:
-    - text: github
-      url: https://github.com/megabytemb
-    - text: email
-      url: mailto:michael@benz.io
+redcarpet:
+    extensions: [with_toc_data]
+permalink: /posts/:title
+gems:
+  - jemoji
+
+name: Michael Benz
+url: http://michael.benz.io
+description: UDP: The Honey Badger of the Internet
+twitter: megabytemb
+gravatar_url: https://s.gravatar.com/avatar/6c0535ac068ef3bb648b8290de1047a5
+google_analytics_tracking_id: UA-23219421-1
