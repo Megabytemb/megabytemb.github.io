@@ -36,16 +36,21 @@
 
 	</script>
 </head>
-<!--                          _
-                          .-'` `}
-                  _./)   /       }
-                .'o   \ |       }
-                '.___.'`.\    {`
-                /`\_/  , `.    }
-                \=' .-'   _`\  {
-                 `'`;/      `,  }
-                    _\       ;  }
-  O HAI THERE      /__`;-...'--'
+<!--                          
+                                 _
+                                | \
+                                | |
+                                | |
+           |\                   | |
+          /, ~\                / /
+         X     `-.....-------./ /
+          ~-. ~  ~              |
+             \             /    |
+              \  /_     ___\   /
+              | /\ ~~~~~   \ |
+              | | \        || |
+              | |\ \       || )
+      Meow!  (_/ (_/      ((_/
 
 -->
 <body>
@@ -66,6 +71,7 @@
         <ul>
           <li><a href="/about.html">about</a></li>
           <li><a href="/">posts</a></li>
+		  <li><a href="http://apps.megabytemb.com">apps</a></li>
         </ul>
       </section>
     </section>
@@ -77,11 +83,27 @@
     
     
       <li>
-        <span>February 23, 2015</span> <a href="/posts/jekyll-tip">#TooStubbornToReadTheManual</a>
+        <span>February 27, 2015</span> <a href="/posts/Mac-Terminal-Easter-Egg">Write your own Easter Egg</a>
       </li>
         
         
           
+        
+    
+    
+    
+      <li>
+        <span>February 23, 2015</span> <a href="/posts/jekyll-tip">#TooStubbornToReadTheManual</a>
+      </li>
+        
+        
+    
+    
+    
+      <li>
+        <span>February 23, 2015</span> <a href="/posts/Python-Regex">Python and Regex</a>
+      </li>
+        
         
     
     
@@ -98,20 +120,26 @@
   
 
   
-    <h1><a href="/index.html">#TooStubbornToReadTheManual</a></h1>
+    <h1><a href="/index.html">Write your own Easter Egg</a></h1>
      <section class="byline">
-       February 23, 2015
+       February 27, 2015
      </section>
-     <h2 id="jekyll-tip(s)">Jekyll Tip(s)</h2>
+     <p>So Recently, through a series of random events, I discovered that Mac&#39;s Terminal support Emoji!</p>
 
-<p>Well, I just spent half an hour trying to make a new Jeykll post, and figured I&#39;d pass on some wisdom.</p>
+<p>So I figured, Why not make my own <em>Easter Egg!!</em></p>
 
-<p>Jeykyll filenames have to be <code>&lt;year&gt;-&lt;month&gt;-&lt;day&gt;.markdown</code></p>
-
-<p>You can also escape Hash&#39;s in YMAL by surrounding the string in quotes like so: </p>
-<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="l-Scalar-Plain">title</span><span class="p-Indicator">:</span> <span class="s">&quot;#TooStubbornToReadTheManual&quot;</span>
+<p>For those who use ZSH, feel free to add this into your Prompt!</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">emoji<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">current_folder</span><span class="o">=</span><span class="k">${</span><span class="nv">PWD</span><span class="p">##*/</span><span class="k">}</span>
+    <span class="k">if</span> <span class="o">[[</span> <span class="nv">$current_folder</span> <span class="o">==</span> <span class="s1">&#39;love&#39;</span> <span class="o">&amp;&amp;</span> <span class="nv">$platform</span> <span class="o">==</span> <span class="s1">&#39;osx&#39;</span> <span class="o">]]</span>
+    <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&quot;❤️ &quot;</span>
+    <span class="k">else</span>
+        <span class="nb">echo</span> <span class="s2">&quot;$&quot;</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
 </code></pre></div>
-<p>Just FYI,</p>
+<p>If you like what you see, Check out my whole prompt <a href="https://github.com/megabytemb/dotfiles/blob/master/zsh/prompt.zsh">Here</a></p>
 
   
 </section>

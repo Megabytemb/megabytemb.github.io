@@ -4,11 +4,37 @@
  <title>Michael Benz</title>
  <link href="http://michael.benz.io/atom.xml" rel="self"/>
  <link href="http://michael.benz.io/"/>
- <updated>2015-02-23T01:05:57+11:00</updated>
+ <updated>2015-02-27T23:39:02+11:00</updated>
  <id>http://michael.benz.io</id>
  <author>
    <name>Michael Benz</name>
  </author>
+ 
+ 
+ 
+ <entry>
+   <title>Write your own Easter Egg</title>
+   <link href="http://michael.benz.io/posts/Mac-Terminal-Easter-Egg"/>
+   <updated>2015-02-27T00:00:00+11:00</updated>
+   <id>http://michael.benz.io/posts/Mac-Terminal-Easter-Egg</id>
+   <content type="html">&lt;p&gt;So Recently, through a series of random events, I discovered that Mac&amp;#39;s Terminal support Emoji!&lt;/p&gt;
+
+&lt;p&gt;So I figured, Why not make my own &lt;em&gt;Easter Egg!!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For those who use ZSH, feel free to add this into your Prompt!&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;emoji&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;current_folder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PWD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;##*/&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$current_folder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;love&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$platform&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;osx&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;❤️ &amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you like what you see, Check out my whole prompt &lt;a href=&quot;https://github.com/megabytemb/dotfiles/blob/master/zsh/prompt.zsh&quot;&gt;Here&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  
  
@@ -21,12 +47,39 @@
 
 &lt;p&gt;Well, I just spent half an hour trying to make a new Jeykll post, and figured I&amp;#39;d pass on some wisdom.&lt;/p&gt;
 
-&lt;p&gt;Jeykyll filenames have to be &lt;code&gt;&amp;lt;year&amp;gt;-&amp;lt;month&amp;gt;-&amp;lt;day&amp;gt;.markdown&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Jeykyll filenames have to be &lt;code&gt;&amp;lt;year&amp;gt;-&amp;lt;month&amp;gt;-&amp;lt;day&amp;gt;-&amp;lt;URL&amp;gt;.markdown&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;You can also escape Hash&amp;#39;s in YMAL by surrounding the string in quotes like so: &lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p-Indicator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;#TooStubbornToReadTheManual&amp;quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Just FYI,&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+ 
+ <entry>
+   <title>Python and Regex</title>
+   <link href="http://michael.benz.io/posts/Python-Regex"/>
+   <updated>2015-02-23T00:00:00+11:00</updated>
+   <id>http://michael.benz.io/posts/Python-Regex</id>
+   <content type="html">&lt;p&gt;A Friend just asked me how to use Python to match Regx strings, so here&amp;#39;s a quick and dirty example&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;^.*[0-9]&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Michael&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Match!&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;No Match :(&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Michael1&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;Match!&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;No Match :(&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
 </content>
  </entry>
  

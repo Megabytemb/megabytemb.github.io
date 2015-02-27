@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>
     
-      Somethang knew! &ndash;
+      Python and Regex &ndash;
     
     Michael Benz
   </title>
@@ -78,18 +78,30 @@
 
     <section class="content">
   <h1>
-    <a href="/posts/Somethang-knew">Somethang knew!</a>
+    <a href="/posts/Python-Regex">Python and Regex</a>
   </h1>
 
   <section class="byline">
-    February 22, 2015
+    February 23, 2015
   </section>
   
-  <h2 id="well-this-is-a-first-(not!)">Well This is a first (not!)</h2>
+  <p>A Friend just asked me how to use Python to match Regx strings, so here&#39;s a quick and dirty example</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s">&quot;^.*[0-9]&quot;</span><span class="p">)</span>
 
-<p>Um...Hi?</p>
+<span class="n">result</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">&quot;Michael&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Match!&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;No Match :(&quot;</span>
 
-<p>have a <a href="http://reddit.com/r/cats">Cat!</a></p>
+<span class="n">result</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s">&quot;Michael1&quot;</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">result</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;Match!&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&quot;No Match :(&quot;</span>
+</code></pre></div>
+<p>Enjoy!</p>
 
 
 </section>
