@@ -16,7 +16,9 @@ title: "Blorg"
   {% endif %}
 
   {% if first_non_draft_post != false %}
-    <h1><a href="{{ first_non_draft_post.url }}">{{ first_non_draft_post.title }}</a></h1>
+    <h1>
+		{{ first_non_draft_post.title }}
+	</h1>
     <md-subheader class="md-no-sticky">
       {{ first_non_draft_post.date | date: "%B %e, %Y" }}
     </md-subheader>
