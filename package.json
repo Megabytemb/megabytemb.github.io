@@ -1,0 +1,25 @@
+{
+  "name": "megabytemb.github.io",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/megabytemb/megabytemb.github.io.svg?branch=master)](https://travis-ci.org/megabytemb/megabytemb.github.io)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megabytemb/megabytemb.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megabytemb/megabytemb.github.io/issues"
+  },
+  "homepage": "https://github.com/megabytemb/megabytemb.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.9.12",
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.5.1",
+    "lodash": "^3.10.1"
+  }
+}

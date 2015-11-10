@@ -1,0 +1,24 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-2dp" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+	<md-content layout-padding>
+        <ul>
+            <li><a href="/about.html">about</a></li>
+		    <li><a href="http://apps.megabytemb.com">apps</a></li>
+        </ul>
+	    {% if site.posts.size > 1 %}
+	    <md-list>
+	    <md-subheader class="md-no-sticky">Posts</md-subheader>
+	        {% for post in site.posts %}
+	        {% unless post.draft %}
+		  	<md-list-item class="md-2-line" ng-href="{{ post.url }}">
+				<md-icon class="md-avatar-icon" md-font-set="material-icons">keyboard_arrow_right</md-icon>
+	  	        <div class="md-list-item-text">
+	  	            <h3>{{ post.title }}</h3>
+	  	            <p>{{ post.date | date: "%B %e, %Y" }}</p>
+	  	        </div>
+	  	    </md-list-item>
+	        {% endunless %}
+	        {% endfor %}
+	    </md-list>
+	    {% endif %}
+	</md-content>
+</md-sidenav>

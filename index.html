@@ -5,27 +5,21 @@ title: "Blorg"
 <section class="content">
   {% assign first_non_draft_post = false %}
   {% if site.posts.size > 1 %}
-  <ul class="listing">
     {% for post in site.posts %}
     {% unless post.draft %}
-      <li>
-        <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-      </li>
         {{ # Save the first non draft post you find }}
         {% if first_non_draft_post == false %}
           {% assign first_non_draft_post = post %}
         {% endif %}
     {% endunless %}
     {% endfor %}
-  </ul>
-  <br/><br/>
   {% endif %}
 
   {% if first_non_draft_post != false %}
-    <h1><a href="{{ page.url }}">{{ first_non_draft_post.title }}</a></h1>
-     <section class="byline">
-       {{ first_non_draft_post.date | date: "%B %e, %Y" }}
-     </section>
+    <h1><a href="{{ first_non_draft_post.url }}">{{ first_non_draft_post.title }}</a></h1>
+    <md-subheader class="md-no-sticky">
+      {{ first_non_draft_post.date | date: "%B %e, %Y" }}
+    </md-subheader>
      {{ first_non_draft_post.content }}
   {% endif %}
 </section>
