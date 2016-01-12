@@ -6,7 +6,7 @@ title: Hardware Model bassed Collections in SCCM 2012 R2
 Recently at work, we decided to upgrade our SCCM installtion to SCCM 2012 R2 SP1. 
 I would call our installation a medium sized install, with about 2,000 clients.
 
-Due to an annual upgrade cycle with our hardware providor, at any one time we have 3 different laptop and desktops to support. On top of that, we have a couple of special hardware installions where people needed higher end machines.
+Due to an annual upgrade cycle with our hardware providor, at any one time we have 3 different laptop and desktops to support. On top of that, we have a couple of special hardware installations where people needed higher end machines.
 
 As you could imagine, this becomes a bit of a nightmare when managing driver updates, specific software requirements and alike.
 
