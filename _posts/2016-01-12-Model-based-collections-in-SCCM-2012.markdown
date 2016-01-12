@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hardware Model badded Collections in SCCM 2012 R2
+title: Hardware Model bassed Collections in SCCM 2012 R2
 ---
 
 Recently at work, we decided to upgrade our SCCM installtion to SCCM 2012 R2 SP1. 
