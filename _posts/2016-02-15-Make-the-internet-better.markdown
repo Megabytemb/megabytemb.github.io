@@ -1,46 +1,67 @@
 ---
 layout: post
-title: Hardware Model bassed Collections in SCCM 2012 R2
+title: Making the Internet Better
 ---
 
-Recently at work, we decided to upgrade our SCCM installtion to SCCM 2012 R2 SP1. 
-I would call our installation a medium sized install, with about 2,000 clients.
+I was recently just laying around, and started thinking about a couple of issues with how the Internet operates today, and thought of a couple of things, that if changed, could really increase usability and general ability to communicate on web, and have that communication actually mean something
 
-Due to an annual upgrade cycle with our hardware providor, at any one time we have 3 different laptop and desktops to support. On top of that, we have a couple of special hardware installations where people needed higher end machines.
+[Talk about different between Authentication and Auth]
 
-As you could imagine, this becomes a bit of a nightmare when managing driver updates, specific software requirements and alike.
+#1. Actual Federated Authentication.
 
-###WMI to the Rescue!!
+Imagine a single, universal, Government endorsed Authentication protocol. Every Human gets one set of credentials. Security via Username, Password, OTA Code, Certificate, And Biometric Security combinations.
 
-There is a lovely class of WMI called `Win32_ComputerSystem`
-To see what information is avaliable to you, run the following in Powershell
+That Account Is You.
 
-```
-Get-WMIObject -query "select * from Win32_ComputerSystem"
-```
+If we had this, and it was universally trusted. We could Vote using it.
 
-A useful section of this is `model`
-With our Lenovo workstations, we can use the Model section to determine what hardware we're dealing with.
+- Vote for Presidents
+- Vote on Laws
+- Vote on Prosecution
+- Sign petitions
 
-###How do we get this in SCCM
+With this system, all those Change.org campaigns gain weight overnight, as suddenly the signatures aren't just dupicate accounts, but actual, one time only votes.
 
-Luckily, the Hardware Inventory process of SCCM collects this information, and all we have to do is create a query against it in the Database.
+With this, we could even change *how* we vote on these things. Imagine changing a Law via a Pull Request on Github!
 
-Here's one of the queries I used when creating our collections
+You could also link these credentials to all your online apps
 
-```
-select 
-	SYS.ResourceID,
-	SYS.ResourceType,
-	SYS.Name,
-	SYS.SMSUniqueIdentifier,
-	SYS.ResourceDomainORWorkgroup,
-	SYS.Client 
-from SMS_R_System as Sys 
-inner join 
-	SMS_G_System_COMPUTER_SYSTEM as CompSys 
-	on CompSys.ResourceID = Sys.ResourceId 
-where CompSys.Model like "%20B7%"
-```
+- Facebook
+- Twitter
+- Slack
+- Battle.net
+- Reddit
+- 4Chan
 
-All you'll need to do is update the Model number to suit your system.
+Well...maybe not that last one... because when using these credentials, you would not be able to hide on the Internet. Everyone would know its you. 
+However, Nothing would stop the creation of local credentials per application, like we have today. (Don't worry, you will still be able to create throwaway's on Reddit.)
+But when you are signed in, suddenly, Everything online would have more merit, because everyone becomes accountable for what they say.
+
+This Authentication could also be used for local accounts. Your computer logon at home and at work, your Phone account. Your home Automation.
+
+It would truly be a Unique Identifier.
+
+
+#2. Truly separate Authentication from Authorization
+
+I am so tired of having to log into different GMail accounts, Different Twitter Accounts, Different Reddit Accounts.
+
+Authenticate Once; Authorize Many...
+
+Lets look at an example.
+
+[Barbara Dunkelman](https://twitter.com/bdunkelman) is the Social Media and Community Manager at Rooster Teeth.
+Understandably, Barbara would have to access multiple Twitter accounts. Rooster Teeth, Funhaus, Achievement Hunter, and her own personal one, Just to name a few. Every Twitter account has its own email address, Username, and Password. 
+
+Now, I can't comment on how Barbara might handle this, but I know Twitter doesn't natively support multiple accounts. So you would have to log into each account separately.
+
+But imagine if this followed the *Authenticate Once; Authorize Many* approach...
+
+This means Barbara could Log in once, then get a nice drop-down allowing her to select which account she wishes to impersonate.
+
+
+
+Now a couple of large applications are starting to use this model (Facebook, for one, does this very well with Pages) but it's no-where near wide spread as it should be.
+And if we couple this with the Federated Authentication we spoke about earlier, you would only have to Authenticate Once. 
+
+Imagine that. One Username. One Password. One Person.
