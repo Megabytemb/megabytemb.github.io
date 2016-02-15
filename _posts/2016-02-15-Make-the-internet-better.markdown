@@ -7,8 +7,8 @@ I was recently just laying around, and started thinking about a couple of issues
 
 Now Before I go further, I feel like I need to talk about what I believe Authentication and Authorization is.
 
-**Authentication** is the act of identifying yourself.
-**Authorization**  is determining what you have access to.
+- **Authentication** is the act of identifying yourself.
+- **Authorization**  is determining what you have access to.
 
 #1. Actual Federated Authentication.
 
