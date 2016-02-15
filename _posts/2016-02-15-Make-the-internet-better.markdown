@@ -3,9 +3,12 @@ layout: post
 title: Making the Internet Better
 ---
 
-I was recently just laying around, and started thinking about a couple of issues with how the Internet operates today, and thought of a couple of things, that if changed, could really increase usability and general ability to communicate on web, and have that communication actually mean something
+I was recently just laying around, and started thinking about a couple of issues with how the Internet operates today, and thought of a couple of things, that if changed, could really increase usability and general ability to communicate on web, and have that communication actually mean something.
 
-[Talk about different between Authentication and Auth]
+Now Before I go further, I feel like I need to talk about what I believe Authentication and Authorization is.
+
+**Authentication** is the act of identifying yourself.
+**Authorization**  is determining what you have access to.
 
 #1. Actual Federated Authentication.
 
