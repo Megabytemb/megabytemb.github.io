@@ -53,8 +53,8 @@ Authenticate Once; Authorize Many...
 
 Lets look at an example.
 
-[Barbara Dunkelman](https://twitter.com/bdunkelman) is the Social Media and Community Manager at Rooster Teeth.
-Understandably, Barbara would have to access multiple Twitter accounts. Rooster Teeth, Funhaus, Achievement Hunter, and her own personal one, Just to name a few. Every Twitter account has its own email address, Username, and Password. 
+[Barbara Dunkelman][1] is the Social Media and Community Manager at Rooster Teeth.
+Understandably, Barbara would have to access multiple Twitter accounts. [Rooster Teeth][2], [Funhaus][3], [Achievement Hunter][4], and her own [personal][1] one, Just to name a few. Every Twitter account has its own email address, Username, and Password. 
 
 Now, I can't comment on how Barbara might handle this, but I know Twitter doesn't natively support multiple accounts. So you would have to log into each account separately.
 
@@ -68,3 +68,8 @@ Now a couple of large applications are starting to use this model (Facebook, for
 And if we couple this with the Federated Authentication we spoke about earlier, you would only have to Authenticate Once. 
 
 Imagine that. One Username. One Password. One Person.
+
+[1]:https://twitter.com/bdunkelman
+[2]:https://twitter.com/RoosterTeeth
+[3]:https://twitter.com/FunhausTeam
+[4]:https://twitter.com/AchievementHunt
